@@ -1,0 +1,12 @@
+$fecha_reserva = = mktime(0, 0, 0, date("m")  , date("d"), date("Y"));
+	$nombre_material = $_POST['material'];
+	   $conection = mysql_connect("localhost", "root");
+	   mysql_select_db("bd_educayaprende",$db);
+	   $sql = "SELECT * FROM id_reserva WHERE id = $id"
+	   $result = mysql_query($sql);
+	   $sql = "UPDATE reserva SET nombre='$nombre'";
+	for(){
+		if($_POST['material']=$m){
+
+		}
+	}
