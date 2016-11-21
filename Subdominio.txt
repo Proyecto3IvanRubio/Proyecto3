@@ -1,1 +1,21 @@
-proyecto2.educayaprende.com
+Subdominio: proyecto2.educayaprende.com
+Usuario: u745657170
+Password: proyecto2
+Nombre del dominio: educayaprende.com
+ip: 31.220.16.51
+
+-David-
+usuario login sql: dmarin 
+contraseña login sql: dm1234
+-Agnes-
+usuario login sql: aplans
+contraseña login sql: ap1234
+-Ignasi-
+usuario login sql: imolins 
+contraseña login sql:im1234
+-Sergio-
+usuario login sql: sjimenez 
+contraseña login sql: sj1234
+-Roger-
+usuario login sql: rfuster
+contraseña login sql: rf1234

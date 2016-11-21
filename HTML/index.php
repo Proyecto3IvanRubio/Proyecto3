@@ -1,4 +1,8 @@
-
+<!--
+Author: Alejandro
+CoAuthor: Ivan
+CoAuthor: Miguel
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,9 +29,6 @@
 			   </script>
 </head>
 <body>
-
-
-
    <!--- start-header---->
   <div class="wrapper">
     <!--start-header---->
@@ -40,10 +41,10 @@
 
 					<ul class="nav" id="nav">
 					  <li class="current"><a href="index.html">Inicio</a></li>
-					  <li><a href="reservas.html">Reservas</a></li>
-					  <li><a href="historial.html">Historial</a></li>
-					  <li><a href="incidencias.html">Incidencias</a></li>
-					  <li><a href="contact.html">Finalizar Reserva</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="incidencias.html">Incidencias</a></li>
+            <li><a href="finalizarReserva.html">Finalizar Reserva</a></li>
 					  <div class="clearfix"></div>
 					</ul>
 					<script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -85,7 +86,7 @@
 					}
 				}
 
-			}
+			
 			else{
 				//COMPROBAR QUE LOS DATOS DE LA BD NO ESTAN SIN
 				echo "<script language='javascript'>alert('NO SE HA RELLENADO NINGUNA CAMPO DEL FORMULARIO.');</script>";
@@ -108,7 +109,7 @@
 
      <div class="container banner">
 	 	<div class="row">
-	 			<form name="f1" action="formulario_prueba.php" method="GET" onsubmit="return validar();">
+	 			<form name="f1" action="VerMaterialesDisponibles.php" method="GET" onsubmit="return validar();">
 
         <table style="border-spacing: 15px; border-collapse: inherit;" >
         <tr>
@@ -148,7 +149,7 @@
               <option value="Carro">Carro</option>
               </optgroup>
 
-              <input style  ="background-color:#90EE90 ; margin-left: 10px;" type="submit" name="reservar" value="Reservar"/><br/><br/></td>
+             <a href="../HTML/VerMaterialesDisponibles.php" target="_self"> <input style  ="background-color:#90EE90 ; margin-left: 10px;" type="submit" name="reservar" value="Reservar"/><br/><br/></td>
 
 
           </select><br/>

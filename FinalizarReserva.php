@@ -1,5 +1,5 @@
 <!--
-Author: Alejandro
+CoAuthor: Alejandro
 CoAuthor: Ivan
 CoAuthor: Miguel
 -->
@@ -38,7 +38,7 @@ CoAuthor: Miguel
           <a href="index.html"><img src="images/logo.png" style="width:70%;" alt=""></a>
         </div>
           <div class="menu">
-          
+
           <ul class="nav" id="nav">
               <li class="current"><a href="index.html">Inicio</a></li>
             <li><a href="reservas.html">Reservas</a></li>
@@ -54,7 +54,7 @@ CoAuthor: Miguel
        </div>
     </div>
   <!--- //End-header---->
-  
+
   <?php
 
 		//realizamos la conexión
@@ -73,7 +73,7 @@ CoAuthor: Miguel
 				";
 				$reservas= mysqli_query($conexion, $sql);
 				if(mysqli_num_rows($reservas)>0){
-				
+
 					$finalizar_status = 'unchecked';
 					$continuar_status = 'unchecked';
 
@@ -81,21 +81,21 @@ CoAuthor: Miguel
 
 					$selected_radio = $_POST['finalizar'];
 
-					if ($selected_radio == 'finalizar') {
+					if ($selected_radio = = 'finalizar') {
 
 					$finalizar_status = 'checked';
 
 					}
-					else if ($selected_radio == 'continuar') {
+					else if ($selected_radio = = 'continuar') {
 
 					$continuar_status = 'checked';
 
 					}
-				
+
 				}
 
-}
-			
+      }
+			}
 
     mysqli_close($conexion);
 		?>
@@ -114,16 +114,13 @@ CoAuthor: Miguel
         <div class="col-md-8 middle_left">
         </div>
         <div class="col-md-4">
-          
-                  
+
+
                 <div class="clear"></div>
               </ul>
-              
+
                    </div>
-                    
+
  </div>
 </body>
 </html>
-
-
-
