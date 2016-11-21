@@ -58,7 +58,7 @@ CoAuthor: Miguel
 	<?php
 
 		//realizamos la conexión
-			$conexion = mysqli_connect('localhost', 'root','', 'bd_bicis');
+			$conexion = mysqli_connect('localhost', 'root','', 'bd_proyecto3');
 			$acentos = mysqli_query($conexion, "SET NAMES 'utf8'");
 
 			if (!$conexion) {
@@ -69,20 +69,20 @@ CoAuthor: Miguel
 			$sin_nada = 0 ;
 			extract($_REQUEST);
 
-				$sql = "SELECT id_reserva, nombre_material, estado_reserva AS Disponibilidad
-				FROM tbl_reserva
-				INNER JOIN tbl_material";
-				$reservas= mysqli_query($conexion, $sql);
-				if(mysqli_num_rows($reservas)>0){
-					echo "Número de reservas: " . mysqli_num_rows($reservas) . "<br/><br/>";
-					if ( $reserva['estado_reserva']== 1) {
-						while($reserva = mysqli_fetch_array($reservas)){
-							echo "Material: " . $reserva['nombre_material'] . "<br/>";
-							echo "estado_reserva: " . $reserva['estado_reserva'] . "<br/>";
+				$sql = "SELECT * FROM tbl_material ORDER BY id_material";
+				$recursos= sqli_query($conexion, $sql);
+				if(mysqli_num_rows($recursos)>0){
+				 {
+						while($recurso = mysqli_fetch_array($recursos)){
+							echo "Material: " . $recurso['nombre_material'] . "<br/>";
+							echo "Tipo Material: " . $recurso['tbl_material'] . "<br/>";
+							echo "Foto: " . "<img src='../IMG/" . $recurso ['foto_material']. "' width='200px'>"."</br>";
+							echo "</tr>";
+							
 						}
 					}
 					else {
-					 	$sin_nada += 1;
+					 	echo "No hay recursos que mostrar";
 					}
 				}
 
