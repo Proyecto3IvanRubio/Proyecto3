@@ -57,7 +57,7 @@
 	<?php
 
 		//realizamos la conexión
-			$conexion = mysqli_connect('localhost', 'root','', 'bd_bicis');
+			$conexion = mysqli_connect('localhost', 'root','', 'bd_proyecto3');
 			$acentos = mysqli_query($conexion, "SET NAMES 'utf8'");
 
 			if (!$conexion) {
@@ -84,8 +84,7 @@
 					 	$sin_nada += 1;
 					}
 				}
-
-			}
+				
 			else{
 				//COMPROBAR QUE LOS DATOS DE LA BD NO ESTAN SIN
 				echo "<script language='javascript'>alert('NO SE HA RELLENADO NINGUNA CAMPO DEL FORMULARIO.');</script>";

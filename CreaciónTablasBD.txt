@@ -21,7 +21,8 @@ CREATE TABLE `tbl_reserva` (
 CREATE TABLE `tbl_material` ( 
   `id_material` INT(4) NOT NULL AUTO_INCREMENT, 
   `nombre_material` VARCHAR(20) NOT NULL, 
-  `tipo_material` VARCHAR(20) NOT NULL, 
+  `tipo_material` VARCHAR(20) NOT NULL,
+  `foto_material` VARCHAR(30) NOT NULL,
   `estado_material` BOOLEAN NOT NULL, 
   `id_reserva` INT(7) NOT NULL, 
   PRIMARY KEY  (`id_material`) 

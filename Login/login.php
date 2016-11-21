@@ -19,10 +19,10 @@
 		$usuarios= mysqli_query($conexion, $sql);
 		echo "$sql";
 		if(mysqli_num_rows($usuarios)>0){
-			header('Location: ../HTML/index.html');
+			header('Location: ../HTML/index.php');
 		}
 		else{
-			header('Location: login.html');
+			header('Location: login.php');
 		}
 	mysqli_close($conexion);
 		?>

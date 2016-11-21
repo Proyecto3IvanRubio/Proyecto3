@@ -35,7 +35,7 @@ CoAuthor: Miguel
 		 <div class="header">
 	       <div class="container header_top">
 				<div class="logo" style="width: 50%;">
-				  <a href="index.html"><img src="images/logo.png" style="width:70%;" alt=""></a>
+				  <a href="index.php"><img src="images/logo.png" style="width:70%;" alt=""></a>
 				</div>
 		  		<div class="menu">
 
@@ -70,39 +70,26 @@ CoAuthor: Miguel
 			extract($_REQUEST);
 
 				$sql = "SELECT * FROM tbl_material ORDER BY id_material";
-				$recursos= sqli_query($conexion, $sql);
+				$recursos= mysqli_query($conexion, $sql);
+
+
 				if(mysqli_num_rows($recursos)>0){
-				 {
 						while($recurso = mysqli_fetch_array($recursos)){
 							echo "Material: " . $recurso['nombre_material'] . "<br/>";
-							echo "Tipo Material: " . $recurso['tbl_material'] . "<br/>";
+							echo "Tipo Material: " . $recurso['tipo_material'] . "<br/>";
 							echo "Foto: " . "<img src='../IMG/" . $recurso ['foto_material']. "' width='200px'>"."</br>";
 							echo "</tr>";
-							
+
 						}
 					}
+		
 					else {
 					 	echo "No hay recursos que mostrar";
 					}
-				}
+				
 
 			
-			else{
-				//COMPROBAR QUE LOS DATOS DE LA BD NO ESTAN SIN
-				echo "<script language='javascript'>alert('NO SE HA RELLENADO NINGUNA CAMPO DEL FORMULARIO.');</script>";
-				echo "<h1 style='text-align:center;'> Todas las Bicis Encontradas </h1> <br/>";
-				$sql = "SELECT * FROM tbl_material ";
-				$materiales = mysqli_query($conexion, $sql);
-				if(mysqli_num_rows($materiales)>0){
-					echo "Número de reservas: " . mysqli_num_rows($reservas) . "<br/><br/>";
-					while($material = mysqli_fetch_array($materiales)){
-						echo "Nombre: " . $material['nombre_material'] . "<br/>";
-					}
-				}
-				else {
-					echo "No hay datos que mostrar!";
-				}
-			}
+			
 
     mysqli_close($conexion);
 		?>
