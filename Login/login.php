@@ -5,7 +5,7 @@
   <title>Log-in</title>
 <?php
 	//realizamos la conexión
-		$conexion = mysqli_connect('localhost', 'root','', 'bd_educayaprende');
+		$conexion = mysqli_connect('localhost', 'root','', 'bd_proyecto3');
 		$acentos = mysqli_query($conexion, "SET NAMES 'utf8'");
 
 		if (!$conexion) {
